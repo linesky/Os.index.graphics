@@ -1,3 +1,4 @@
-# Os.iso.mem32.format
+# Os.iso.command
 
-a tutorial on mem32 format convert cs:bx into 32 bits address
+a compleat os id exit.com dir.com
+
