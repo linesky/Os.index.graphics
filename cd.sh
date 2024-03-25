@@ -17,6 +17,7 @@ fasm dir.asm dir.com
 fasm exit.asm exit.com
 fasm cls.asm cls.com
 fasm sleep.asm sleep.com
+fasm time.asm time.com
 cp *.com CD_root/isolinux/
 ls CD_root/isolinux/ > list.txt
 sed -i 's/$/\r/g'  list.txt 
