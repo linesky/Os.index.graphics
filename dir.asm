@@ -417,7 +417,27 @@ cprint:
           pop ax                
           RET     
 
-
+len:                
+          push bx                
+          push cx                
+          push dx                
+          mov cx,0                
+          LEN1:     
+                               
+                    mov al,[bx]
+                    cmp al,0                
+                    JZ LEN2                
+                    inc bx                
+                    inc cx                
+                    cmp cx,0                
+                    JNZ LEN1                
+          LEN2:                
+          mov ax,cx
+          pop dx                
+          pop cx                
+          pop bx                
+          RET                
+                
 text1 db 22,"input a string.....",13,10,0
 string2 db "$",0
 file1 db "list.txt",0
