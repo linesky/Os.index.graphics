@@ -11,9 +11,11 @@ cp *.elf CD_root/isolinux/
 cp *.jpg CD_root/isolinux/
 cp *.menu CD_root/isolinux/
 cp *.txt CD_root/isolinux/
-fasm help.asm hello.com
+fasm hello.asm hello.com
+fasm help.asm help.com
 fasm dir.asm dir.com
 fasm exit.asm exit.com
+fasm cls.asm cls.com
 cp *.com CD_root/isolinux/
 ls CD_root/isolinux/ > list.txt
 sed -i 's/$/\r/g'  list.txt 
