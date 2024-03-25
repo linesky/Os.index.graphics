@@ -422,5 +422,5 @@ len:
 text1 db 22,"input a string.....",13,10,0
 string2 db "$",0
 file1 db "list.txt"
-str2 db 13,10,"sys operater",13,10,"hello.com",13,10,"dir.com",13,10,"exit.com",13,10,0
+str2 db 13,10,"sys operater",13,10,"hello.com",13,10,"dir.com",13,10,"exit.com",13,10,"clock.com",13,10,"cls.com",13,10,"date.com",13,10,"time.com",13,10,"hello.com",13,10,"sleep.com",13,10,0
 endf db "          .                                                               "
