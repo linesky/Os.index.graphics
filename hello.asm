@@ -9,9 +9,10 @@ color dd 07h
 MAIN:   		
           call backs
           
-
 mov bx,str2
-mov cx,60
+call len
+mov cx,ax
+mov bx,str2
 call cprint                  
                     
                      
@@ -396,9 +397,30 @@ backs:
           pop cx                
           pop bx                
           pop ax                
-          RET       
+          RET   
+          
+len:                
+          push bx                
+          push cx                
+          push dx                
+          mov cx,0                
+          LEN1:                
+                    mov al,[bx]
+                    cmp al,0                
+                    JZ LEN2                
+                    inc bx                
+                    inc cx                
+                    cmp cx,0                
+                    JNZ LEN1                
+          LEN2:                
+          mov ax,cx
+          pop dx                
+          pop cx                
+          pop bx                
+          RET                
+                              
 text1 db 22,"input a string.....",13,10,0
 string2 db "$",0
 file1 db "list.txt"
-str2 db 13,10,"sys operater",13,10,"hello.com",13,10,"dir.com",13,10,"exit.com",13,10
+str2 db 13,10,"sys operater",13,10,"hello.com",13,10,"dir.com",13,10,"exit.com",13,10,0
 endf db "          .                                                               "
