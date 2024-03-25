@@ -16,7 +16,7 @@ fasm dir.asm dir.com
 fasm exit.asm exit.com
 cp *.com CD_root/isolinux/
 ls CD_root/isolinux/ > list.txt
-sed -i 's/$/\n\r/g'  list.txt 
+sed -i 's/$/\r/g'  list.txt 
 cp list.txt CD_root/isolinux/list.txt
 genisoimage -o myos.iso -input-charset utf-8 -b isolinux/isolinux.bin -no-emul-boot -boot-load-size 4  -boot-info-table ./CD_root 
 
