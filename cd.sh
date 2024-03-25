@@ -19,6 +19,7 @@ fasm cls.asm cls.com
 fasm sleep.asm sleep.com
 fasm time.asm time.com
 fasm date.asm date.com
+fasm clock.asm clock.com
 cp *.com CD_root/isolinux/
 ls CD_root/isolinux/ > list.txt
 sed -i 's/$/\r/g'  list.txt 
