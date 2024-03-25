@@ -6,7 +6,10 @@ destenytext dd 1
 x:    dd 0     
 y:     dd 0
 color dd 07h
-MAIN:   		
+MAIN:
+mov ax,3
+int 10h
+   		
           call clears
               
                      
