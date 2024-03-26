@@ -20,6 +20,7 @@ fasm sleep.asm sleep.com
 fasm time.asm time.com
 fasm date.asm date.com
 fasm clock.asm clock.com
+fasm beep.asm beep.com
 fasm shutdown.asm shutdown.com
 cp *.com CD_root/isolinux/
 ls *.com CD_root/isolinux/ > list.txt
